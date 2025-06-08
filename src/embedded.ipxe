@@ -1,0 +1,26 @@
+#!ipxe
+
+# IP-Adresse per DHCP holen
+dhcp || goto no_network
+
+# Optional: DNS setzen
+set dns 1.1.1.1
+
+# Optional: Uhrzeit setzen
+ntp 1.lu.pool.ntp.org || echo NTP fehlgeschlagen
+
+# Hauptmenü starten
+chain http://ipxe.wahke.lu/ipxe/boot.ipxe || goto chain_shell
+
+# Wenn alles klappt, beenden (kommt normal nie hierher)
+exit
+
+:chain_shell
+echo Fehler: konnte Bootmenü nicht laden
+sleep 3
+shell
+
+:no_network
+echo Fehler: keine Netzwerkverbindung!
+sleep 3
+shell
