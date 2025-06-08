@@ -161,10 +161,10 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
 //#define IMAGE_TRUST_CMD	/* Image trust management commands */
 //#define IMAGE_CRYPT_CMD	/* Image encryption management commands */
 //#define PCI_CMD		/* PCI commands */
-//#define PARAM_CMD		/* Request parameter commands */
+#define PARAM_CMD		/* Request parameter commands */
 //#define NEIGHBOUR_CMD		/* Neighbour management commands */
 //#define PING_CMD		/* Ping command */
-//#define CONSOLE_CMD		/* Console command */
+#define CONSOLE_CMD		/* Console command */
 //#define IPSTAT_CMD		/* IP statistics commands */
 //#define PROFSTAT_CMD		/* Profiling commands */
 //#define NTP_CMD		/* NTP commands */
@@ -174,7 +174,7 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
 #define SHIM_CMD		/* EFI shim command (or dummy command) */
 //#define USB_CMD		/* USB commands */
 //#define FDT_CMD		/* Flattened Device Tree commands */
-
+#define CONSOLE_VESAFB
 /*
  * Certificate sources
  *

@@ -10,13 +10,13 @@ set dns 1.1.1.1
 ntp 1.lu.pool.ntp.org || echo NTP fehlgeschlagen
 
 # Hauptmenü starten
-chain http://ipxe.wahke.lu/ipxe/boot.ipxe || goto chain_shell
+chain http://ipxe.wahke.lu/ipxe/boot.php || goto chain_shell
 
 # Wenn alles klappt, beenden (kommt normal nie hierher)
 exit
 
 :chain_shell
-echo Fehler: konnte Bootmenü nicht laden
+echo Fehler: konnte Bootmenu nicht laden
 sleep 3
 shell
 
